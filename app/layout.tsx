@@ -42,10 +42,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={cn(GeistSans.variable, GeistMono.variable)}>
+    <html
+      lang="en"
+      className={cn(GeistSans.variable, GeistMono.variable, "h-full")}
+    >
       <body className="antialiased">
         <Background />
-        <main className="min-w0 mx-4 mt-6 flex min-h-screen max-w-xl flex-auto flex-col px-2 md:px-0 lg:mx-auto">
+        <main className="mx-auto flex w-full max-w-xl flex-grow flex-col px-4 py-6 md:px-0 lg:mx-auto">
           <ThemeProvider
             attribute="class"
             defaultTheme="system"
@@ -53,7 +56,7 @@ export default function RootLayout({
             disableTransitionOnChange
           >
             <Navbar />
-            {children}
+            <div className="flex-grow">{children}</div>
             <Footer />
           </ThemeProvider>
           <Analytics />
