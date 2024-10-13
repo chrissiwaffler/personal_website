@@ -1,15 +1,15 @@
-import type { Metadata } from "next";
-import "./globals.css";
-import { baseUrl } from "./sitemap";
-import { GeistSans } from "geist/font/sans";
-import { GeistMono } from "geist/font/mono";
+import { Background } from "@/components/background";
+import Footer from "@/components/footer";
+import { Navbar } from "@/components/nav";
 import { cn } from "@/lib/utils";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
-import Footer from "@/components/footer";
-import { Navbar } from "@/components/nav";
+import { GeistMono } from "geist/font/mono";
+import { GeistSans } from "geist/font/sans";
+import type { Metadata } from "next";
 import { ThemeProvider } from "next-themes";
-import { Background } from "@/components/background";
+import "./globals.css";
+import { baseUrl } from "./sitemap";
 
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
@@ -45,7 +45,7 @@ export default function RootLayout({
     <html lang="en" className={cn(GeistSans.variable, GeistMono.variable)}>
       <body className="antialiased">
         <Background />
-        <main className="flex-auto min-h-screen min-w0 mt-6 flex flex-col px-2 md:px-0 max-w-xl mx-4 lg:mx-auto">
+        <main className="min-w0 mx-4 mt-6 flex min-h-screen max-w-xl flex-auto flex-col px-2 md:px-0 lg:mx-auto">
           <ThemeProvider
             attribute="class"
             defaultTheme="system"
