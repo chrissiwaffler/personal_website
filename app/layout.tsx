@@ -45,7 +45,7 @@ export default function RootLayout({
     <html lang="en" className={cn(GeistSans.variable, GeistMono.variable)}>
       <body className="antialiased">
         <Background />
-        <main className="flex-auto min-w0 mt-6 flex flex-col px-2 md:px-0 max-w-xl mx-4 lg:mx-auto">
+        <main className="flex-auto min-h-screen min-w0 mt-6 flex flex-col px-2 md:px-0 max-w-xl mx-4 lg:mx-auto">
           <ThemeProvider
             attribute="class"
             defaultTheme="system"
